@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Tasks from './Component/Tasks/Tasks';
 
-export default class App extends Component{
+export default class Create extends Component{
   render() {
     return (
       <View style={styles.container}>
