@@ -17,7 +17,9 @@ class TitleScreen extends Component{
                 block={true}
                 onPress={() => this.props.navigation.navigate('HomeScreen')}
             >
-
+            <Text>
+                TODO
+            </Text>
             
             </Button>
         </View>

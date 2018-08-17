@@ -14,10 +14,10 @@ export default class Create2 extends Component{
     }
   }
   handleClick(){
-      const notes = this.state.notes.slice();
-      const allNotes= this.state.allNotes.slice();
-      const newNotes= this.state.newNotes.slice();
-      const editNote= this.state.editNote.slice();
+      const notes = this.state.notes.dispatch;
+      const allNotes= this.state.allNotes.dispatch;
+      const newNotes= this.state.newNotes.dispatch;
+      const editNote= this.state.editNote.dispatch;
 
       this.setState({notes:notes});
   }
@@ -34,7 +34,7 @@ export default class Create2 extends Component{
         onChangeText={(newNotes) => this.dispatch({Alt})
         }
         />
-        {this.setState.text.('')} 
+        {/* {this.setState.text.('')}  */}
         <Button
             vertical
             onPress= {() => this.props.navigation.navigate('NotesScreen')}

@@ -9,7 +9,6 @@ import Edit from './Component/CreateEdit/Edit';
 import NotesScreen from './Component/Notes/NotesScreen';
 import Alarm from './Component/Alarm/Alarm';
 import SettingsScreen from './Component/Settings/SettingsScreen';
-import StickyHeaderExample from './Component/Home/StickyHeaderExample';
 
 const App = createStackNavigator({
   TitleScreen: {
@@ -32,9 +31,6 @@ const App = createStackNavigator({
   },
   SettingsScreen:{
     screen: SettingsScreen
-  },
-  StickyHeaderExample: { 
-    screen: StickyHeaderExample
   },
   initialRouteName: 'HomeScreen'
   });

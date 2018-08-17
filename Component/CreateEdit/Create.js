@@ -13,12 +13,12 @@ export default class Create extends Component{
         <Text>
         Let's Get Started!
         </Text>
-        <TextInput
+        {/* <TextInput
         style={{height: 40}}
         placeholder="Input your title"
         onChangeText={(text) => this.setState({text})}
-        />
-        {this.setState.text.('')}        
+        /> */}
+        {/* {this.setState.text.('')}         */}
         </View>
         </View>
     );

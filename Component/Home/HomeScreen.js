@@ -9,7 +9,6 @@ import Edit from '../CreateEdit/Edit';
 import NotesScreen from '../Notes/NotesScreen';
 import Alarm from '../Alarm/Alarm';
 import SettingsScreen from '../Settings/SettingsScreen';
-import StickyHeaderExample from './StickyHeaderExample';
 import HomeScreenNavUI from './HomeScreenNavUI';
 
 const HomeScreen = createStackNavigator({
@@ -31,15 +30,15 @@ const HomeScreen = createStackNavigator({
     SettingsScreen:{
       screen: SettingsScreen
     },
-    StickyHeaderExample: { 
-      screen: StickyHeaderExample
-    },
     initialRouteName: "HomeScreenNavUI"
     },{
         render(){
             return(
-                <View>
+                <View 
+                style={styles.homeScreen}
+                >
                 <Button
+                style={styles.homeScreen}
                 vertical
                 onPress= {() => this.props.navigation.navigate('Create')}
                 >
@@ -49,6 +48,7 @@ const HomeScreen = createStackNavigator({
                 </Button>
 
                 <Button
+                style={styles.homeScreen}
                 vertical
                 onPress= {() => this.props.navigation.navigate('NotesScreen')}
                 >
@@ -58,8 +58,9 @@ const HomeScreen = createStackNavigator({
                 </Button>
                 
                 <Button
+                style={styles.homeScreen}
                 vertical
-                onPress= {() => this.props.navigation.navigate('Create')}
+                onPress= {() => this.props.navigation.navigate('Alarm')}
                 >
                <Text>
                    Alarm
@@ -73,6 +74,27 @@ const HomeScreen = createStackNavigator({
     
 })
 
+const styles = StyleSheet.create({
+  homeScreen: {
+    flex: 20,
+    margin: 40,
+    
+  },
+  NotesScreen: {
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+  },
+  Create: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  Alarm: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+});
 
 
 export default HomeScreen;
