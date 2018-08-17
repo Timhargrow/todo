@@ -1,28 +1,41 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import Tasks from './Component/Tasks/Tasks';
+import {createStackNavigator} from 'react-navigation';
 
-export default class App extends Component{
-  render() {
-    return (
-      <View style={styles.container}>
-        <Tasks />
-      </View>
-    );
-  }
-}
+import TitleScreen from './Component/Title/TitleScreen';
+import HomeScreen from './Component/Home/HomeScreen';
+import Create from './Component/CreateEdit/Create';
+import Edit from './Component/CreateEdit/Edit';
+import NotesScreen from './Component/Notes/NotesScreen';
+import Alarm from './Component/Alarm/Alarm';
+import SettingsScreen from './Component/Settings/SettingsScreen';
+import StickyHeaderExample from './Component/Home/StickyHeaderExample';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    borderWidth: 10,
+const App = createStackNavigator({
+  TitleScreen: {
+    screen: TitleScreen
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  HomeScreen: {
+    screen: HomeScreen
   },
-});
+  Create: {
+    screen: Create
+  },
+  Edit: {
+    screen: Edit
+  },
+  NotesScreen: {
+    screen: NotesScreen
+  },
+  Alarm: {
+    screen: Alarm
+  },
+  SettingsScreen:{
+    screen: SettingsScreen
+  },
+  StickyHeaderExample: { 
+    screen: StickyHeaderExample
+  },
+  initialRouteName: 'HomeScreen'
+  });
+export default App;

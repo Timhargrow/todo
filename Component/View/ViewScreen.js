@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import Tasks from './Component/Tasks/Tasks';
 
 export default class ViewScreen extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <Tasks />
+        <Text>
+        ViewScreen
+        </Text>
+       
       </View>
     );
   }

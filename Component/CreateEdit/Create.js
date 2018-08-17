@@ -1,13 +1,26 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import Tasks from './Component/Tasks/Tasks';
+import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
 
 export default class Create extends Component{
+  constructor(props){
+    super(prop);
+    this.state = {text: ''}
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Tasks />
-      </View>
+      <View>
+        <Text>
+        Let's Get Started!
+        </Text>
+        <TextInput
+        style={{height: 40}}
+        placeholder="Input your title"
+        onChangeText={(text) => this.setState({text})}
+        />
+        {this.setState.text.('')}        
+        </View>
+        </View>
     );
   }
 }
