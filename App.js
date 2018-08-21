@@ -9,6 +9,7 @@ import Edit from './Component/CreateEdit/Edit';
 import NotesScreen from './Component/Notes/NotesScreen';
 import Alarm from './Component/Alarm/Alarm';
 import SettingsScreen from './Component/Settings/SettingsScreen';
+import BottomTabNav from './Component/Home/BottomTabNav';
 
 const App = createStackNavigator({
   TitleScreen: {
@@ -33,5 +34,13 @@ const App = createStackNavigator({
     screen: SettingsScreen
   },
   initialRouteName: 'HomeScreen'
+  },{
+    render(){
+      return(
+        <View>
+          <BottomTabNav />
+        </View>
+      );
+    }
   });
 export default App;

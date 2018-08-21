@@ -3,7 +3,6 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import {Button, Icon, Footer, FooterTab} from 'native-base';
 import {createBottomStackNavigator, createStackNavigator} from 'react-navigation';
 
-import TitleScreen from '../Title/TitleScreen';
 import Create from '../CreateEdit/Create';
 import Edit from '../CreateEdit/Edit';
 import NotesScreen from '../Notes/NotesScreen';
@@ -30,19 +29,35 @@ const HomeScreen = createStackNavigator({
     SettingsScreen:{
       screen: SettingsScreen
     },
-    initialRouteName: "HomeScreenNavUI"
+    initialRouteName: "HomeScreenNavUI",
+    
     },{
+      mode: 'modal',
+      headerMode: 'none',
+    },
+    {
         render(){
             return(
-                <View 
-                style={styles.homeScreen}
+                <View
+                style={{
+                  flex:1, 
+                  flexDirection: 'column',
+                  flexWrap: 'wrap',
+                  justifyContent: 'flex-end',
+                  alignContent: 'flex-end',
+                  alignItems: 'flex-end',
+                  borderColor: "transparent",
+                  backgroundColor: "#89cff0",
+                  borderWidth: 3,
+    
+                }}
                 >
                 <Button
-                style={styles.homeScreen}
                 vertical
                 onPress= {() => this.props.navigation.navigate('Create')}
                 >
-               <Text>
+               <Text
+               >
                    CREATE
                </Text>
                 </Button>
@@ -71,7 +86,6 @@ const HomeScreen = createStackNavigator({
                 </View>
             );
         }
-    
 })
 
 const styles = StyleSheet.create({

@@ -6,15 +6,29 @@ import HomeScreen from './HomeScreen';
 import SettingsScreen from '../Settings/SettingsScreen';
 
 const BottomTabNav = createBottomTabNavigator({
-    // HomeScreen: {
-    //     screen: HomeScreen
-    // },
+    HomeScreen: {
+        screen: HomeScreen
+    },
     SettingsScreen: {
         screen: SettingsScreen
     },
     tabBarPosition: 'bottom',
     tabBarComponent: props => {
         return (
+            <View 
+            style={{
+                flex:1, 
+                flexDirection: 'column',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                alignContent: 'center',
+                alignItems: 'center',
+                borderColor: "transparent",
+                backgroundColor: "#89cff0",
+                borderWidth: 3,
+        
+              }}
+              >
             <Footer>
                 <FooterTab>
                     <Button
@@ -28,6 +42,7 @@ const BottomTabNav = createBottomTabNavigator({
                     </Button>
                 </FooterTab>
             </Footer>
+            </View>
         )
     }
 
