@@ -1,15 +1,37 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, TextInput} from 'react-native';
-import {createBottomTabNavigator} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation';
+import {Footer, FooterTab, Button, Icon} from 'native-base';
+import CreateScreenNavigator from '../AdditionalNavigators/CreateScreenNavigator';
 
-import NotesScreen from '../Notes/NotesScreen'
+import NotesScreen from '../Notes/NotesScreen';
 
-var CreateScreenNavigator = createBottomTabNavigator({
+// var CreateScreenNavigator = createStackNavigator({
 
-  NotesScreen:{
-    screen: NotesScreen
-  },
-})
+//   NotesScreen:{
+//     screen: NotesScreen
+//   }, CreateScreenNavigator: {
+//     screen: CreateScreenNavigator
+//   },
+//   initialRouteName: 'NotesScreen'},{
+  
+//   tabBarPosition: 'bottom',
+//   tabBarComponent: props => {
+//     return (
+//       <Footer>
+//         <FooterTab>
+//           <Button
+//           vertical
+//           onPress= {()=> this.props.navigation.navigate('NotesScreen')}
+//           >
+//           <Icon name="ios-add" />
+//           </Button>
+//         </FooterTab>
+//       </Footer>
+//     )
+//   }
+// })
+
 
 export class Input extends Component{
   render() {
@@ -44,6 +66,7 @@ export default class Create extends Component{
           onChangeText={(text)=> this.setState({text})}
           value={this.state.text}
           />
+          <CreateScreenNavigator />
       </View>
     );
   }

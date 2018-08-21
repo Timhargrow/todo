@@ -9,7 +9,7 @@ import Edit from './Component/CreateEdit/Edit';
 import NotesScreen from './Component/Notes/NotesScreen';
 import Alarm from './Component/Alarm/Alarm';
 import SettingsScreen from './Component/Settings/SettingsScreen';
-import BottomTabNav from './Component/Home/BottomTabNav';
+import CreateScreenNavigator from './Component/AdditionalNavigators/CreateScreenNavigator';
 
 const App = createStackNavigator({
   TitleScreen: {
@@ -38,7 +38,9 @@ const App = createStackNavigator({
     render(){
       return(
         <View>
-          <BottomTabNav />
+          <Text>
+            App
+          </Text>
         </View>
       );
     }

@@ -9,7 +9,7 @@ import NotesScreen from '../Notes/NotesScreen';
 import Alarm from '../Alarm/Alarm';
 import SettingsScreen from '../Settings/SettingsScreen';
 import HomeScreenNavUI from './HomeScreenNavUI';
-
+import CreateScreenNavigator from '../CreateEdit/Create';
 const HomeScreen = createStackNavigator({
     HomeScreenNavUI: {
         screen: HomeScreenNavUI
@@ -28,6 +28,9 @@ const HomeScreen = createStackNavigator({
     },
     SettingsScreen:{
       screen: SettingsScreen
+    }, CreateScreenNavigator: { 
+      screen: CreateScreenNavigator
+
     },
     initialRouteName: "HomeScreenNavUI",
     
